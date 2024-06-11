@@ -13,7 +13,7 @@ from src.optimizer import MultiAdam, LR_Adaptor, LR_Adaptor_NTK, Adam_LBFGS
 from src.pde.burgers import Burgers1D, Burgers2D
 from src.pde.chaotic import GrayScottEquation, KuramotoSivashinskyEquation
 from src.pde.heat import Heat2D_VaryingCoef, Heat2D_Multiscale, Heat2D_ComplexGeometry, Heat2D_LongTime, HeatND
-from src.pde.ns import NS2D_LidDriven, NS2D_BackStep, NS2D_LongTime
+from src.pde.ns import NS2D_LidDriven, NS2D_BackStep, NS2D_LongTime, NS2D_Classic
 from src.pde.poisson import Poisson2D_Classic, PoissonBoltzmann2D, Poisson3D_ComplexGeometry, Poisson2D_ManyArea, PoissonND
 from src.pde.wave import Wave1D, Wave2D_Heterogeneous, Wave2D_LongTime
 from src.pde.inverse import PoissonInv, HeatInv
@@ -23,7 +23,7 @@ from src.utils.rar import rar_wrapper
 
 # It is recommended not to modify this example file.
 # Please copy it as benchmark_xxx.py and make changes according to your own ideas.
-pde_list = [Burgers1D, Burgers2D] 
+pde_list = [NS2D_Classic] 
 
 # pde_list += \
 #     [(Burgers2D, {"datapath": "ref/burgers2d_1.dat", "icpath": ("ref/burgers2d_init_u_1.dat", "ref/burgers2d_init_v_1.dat")})] + \
